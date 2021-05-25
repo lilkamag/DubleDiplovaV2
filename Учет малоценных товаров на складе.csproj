@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4847999D-1DAD-48C6-AB0D-110D29266AE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp19</RootNamespace>
+    <AssemblyName>Учет малоценных товаров на складе</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Малоценка %282%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\БИП\Курс 3\25-ПО\Курсовая КПиЯП (Готово)+\Kurs\КУРСАЧ\Kurs\Kurs\Fakes\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Курс 3\25-ПО\Курсовая КПиЯП (Готово)+\Kurs\Kurs\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Смена пароля.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Смена пароля.Designer.cs">
+      <DependentUpon>Смена пароля.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Регистрация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Регистрация.Designer.cs">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Восстановить Пароль.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Восстановить Пароль.Designer.cs">
+      <DependentUpon>Восстановить Пароль.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Авторизация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Авторизация.Designer.cs">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Учет малоценных товаров на складе.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Учет малоценных товаров на складе.Designer.cs">
+      <DependentUpon>Учет малоценных товаров на складе.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Смена пароля.resx">
+      <DependentUpon>Смена пароля.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Авторизация.resx">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Восстановить Пароль.resx">
+      <DependentUpon>Восстановить Пароль.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Регистрация.resx">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Учет малоценных товаров на складе.resx">
+      <DependentUpon>Учет малоценных товаров на складе.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps.58538.13510798883204614.a4f87297-9c90-4b78-a387-6d61ca163a6d %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps.58538.13510798883204614.a4f87297-9c90-4b78-a387-6d61ca163a6d %281%29 %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life-guard-cross-th %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5539d604b2d62.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5539d604b2d621111111111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5539d604b2d621111111111111.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Закрыть %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33333333333333333333333333333333 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_lpointer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_lpointer %281%298888888888888.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок2222222222222222222.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок2222222222222222222 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_lpointer %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Rotate-360-9an4ldevEy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Rotate-360-YXruMZawvp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_row-104 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\А-Я.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\А-Я %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\А-Я1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Я-А.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\911501-200 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22222222222222222222222222222222222222222222222222222 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ssis-export-excel-file-task %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_plus %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spreadsheets-cliparts-141826-7709657 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong-434a636cfdd4862ae2bbd9de58116a7f %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-automation-icon-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Глазикк.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Глазик 2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4444641_200x130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\зар.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\big_lock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимокukfp1111111.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимокewwwwwwwwwwwwwwewe.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимокewwwwwwwwwwwwwwewe1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_316083 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6d4b347bfd56169c1d6bd7b0cfae0518 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ключик генератор пароля.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2222222222222222222222222.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\322222222222.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32222222222222222222222222222222222уцвысчвыуцывау32цсмавуквавукв.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32222222222222222222222222222222222уцвысчвыуцывау32цсмавуквавукв1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="5e94e0a99f13680114d52dad55322d01 %281%29.ico" />
+    <Content Include="5e94e0a99f13680114d52dad55322d01.ico" />
+    <None Include="Resources\Emojione_1F4BE.svg %281%29.png" />
+    <None Include="Resources\38879c9639b74c0ca2f9300bee8e1e21.png" />
+    <None Include="Resources\38879c9639b74c0ca2f9300bee8e1e21 %281%29.png" />
+    <None Include="Resources\38879c9639b74c0ca2f9300bee8e1e21 %282%29.png" />
+    <None Include="Resources\68607 %281%29.png" />
+    <None Include="Resources\mystery-client %281%29.png" />
+    <None Include="Resources\38879c9639b74c0ca2f9300bee8e1e21 %282%291.png" />
+    <None Include="Resources\printPreviewDialog1.Icon.ico" />
+    <None Include="Resources\%24this.Icon.ico" />
+    <Content Include="Малоценка %282%29.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
